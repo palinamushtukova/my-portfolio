@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palina Mushtukova · Product Manager · Meaningful Products</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+:root {
+  --ink: #0D0D0D;
+  --white: #F6F5F1;
+  --purple: #5B3FF5;
+  --gray: #7A7A7A;
+  --light: #E2E1DC;
+  --sans: 'Unbounded', sans-serif;
+  --body: 'Inter', system-ui, sans-serif;
+}
+body { font-family: var(--body); background: var(--white); color: var(--ink); overflow-x: hidden; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 56px; padding: 0 48px;
+  background: var(--white); border-bottom: 1px solid var(--ink);
+}
+.nav-name {
+  font-family: var(--sans); font-size: 12px; font-weight: 700;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  text-decoration: none; color: var(--ink);
+}
+.nav-links { display: flex; list-style: none; }
+.nav-links li { border-left: 1px solid var(--ink); }
+.nav-links a {
+  display: block; padding: 0 22px; line-height: 55px;
+  font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none; color: var(--ink); transition: background .15s, color .15s;
+}
+.nav-links a:hover { background: var(--ink); color: var(--white); }
+.nav-cta {
+  border-left: 1px solid var(--ink);
+  padding: 0 22px; line-height: 55px;
+  font-family: var(--sans); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  text-decoration: none; color: var(--purple); transition: background .15s, color .15s;
+}
+.nav-cta:hover { background: var(--purple); color: var(--white); }
+
+/* ── HERO ── */
+.hero {
+  margin-top: 56px; border-bottom: 1px solid var(--ink);
+  display: grid; grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - 56px);
+}
+.hero-left {
+  border-right: 1px solid var(--ink); padding: 40px 48px;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.hero-eyebrow {
+  font-size: 10px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gray);
+}
+.hero-headline {
+  font-family: var(--sans);
+  font-size: clamp(36px, 4.6vw, 72px);
+  font-weight: 900; line-height: 0.93; letter-spacing: -2px; text-transform: uppercase;
+  flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 2px;
+}
+.hero-headline .acc { color: var(--purple); }
+.hero-bottom {
+  display: flex; align-items: flex-end; justify-content: space-between;
+}
+.hero-bottom-line {
+  font-size: 10px; color: var(--gray); letter-spacing: 0.12em; text-transform: uppercase;
+}
+.hero-bottom-meta { display: flex; flex-direction: column; gap: 5px; }
+.hero-bottom-meta span {
+  font-size: 10px; color: var(--gray); letter-spacing: 0.1em; text-transform: uppercase; display: block;
+}
+.hero-scroll {
+  width: 48px; height: 48px; border: 1px solid var(--ink); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; color: var(--ink); font-size: 18px; transition: background .15s, color .15s;
+}
+.hero-scroll:hover { background: var(--ink); color: var(--white); }
+.hero-right { padding: 64px 48px; display: flex; flex-direction: column; }
+.hero-intro {
+  font-size: 19px; font-weight: 300; line-height: 1.7; color: var(--ink);
+  padding-bottom: 40px; border-bottom: 1px solid var(--ink); margin-bottom: 40px;
+}
+.hero-intro strong { font-weight: 500; }
+.mark {
+  display: inline; background: var(--purple); color: #fff;
+  padding: 1px 7px; font-weight: 500; font-style: normal;
+}
+.hero-stats {
+  display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--ink); margin-bottom: 0;
+}
+.stat-box { padding: 26px 22px; border-right: 1px solid var(--ink); }
+.stat-box:nth-child(even) { border-right: none; }
+.stat-box:nth-child(3), .stat-box:nth-child(4) { border-top: 1px solid var(--ink); }
+.stat-num {
+  font-family: var(--sans); font-size: 34px; font-weight: 900;
+  letter-spacing: -1px; color: var(--purple); display: block; line-height: 1.1;
+}
+.stat-label { font-size: 11px; color: var(--gray); margin-top: 6px; line-height: 1.45; text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* ── SECTION HEADER ── */
+.sh {
+  border-bottom: 1px solid var(--ink); padding: 18px 48px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.sh-num { font-family: var(--sans); font-size: 10px; font-weight: 700; color: var(--purple); letter-spacing: 0.1em; text-transform: uppercase; }
+.sh-title { font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); }
+
+/* ── ABOUT ── */
+#about { border-bottom: 1px solid var(--ink); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--ink); }
+.about-left { border-right: 1px solid var(--ink); padding: 64px 48px; }
+.about-big {
+  font-family: var(--sans); font-size: clamp(34px, 4.5vw, 60px); font-weight: 900;
+  line-height: 0.93; letter-spacing: -1.5px; text-transform: uppercase; margin-bottom: 40px;
+}
+.about-big .acc { color: var(--purple); }
+.about-desc { font-size: 15px; font-weight: 300; line-height: 1.78; color: #333; }
+.about-desc p + p { margin-top: 14px; }
+.about-desc strong { font-weight: 500; color: var(--ink); }
+.about-right { padding: 64px 48px; display: flex; flex-direction: column; gap: 0; }
+.principle-item { padding: 28px 0; border-bottom: 1px solid var(--light); }
+.principle-item:first-child { padding-top: 0; }
+.principle-item:last-child { border-bottom: none; }
+.p-label { font-family: var(--sans); font-size: 9px; font-weight: 700; color: var(--purple); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
+.principle-item h3 { font-family: var(--sans); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+.principle-item p { font-size: 13px; color: #555; line-height: 1.65; font-weight: 300; }
+
+/* Marathon strip */
+.marathon-strip {
+  background: var(--ink); color: var(--white);
+  padding: 40px 48px;
+  display: flex; align-items: center; gap: 48px;
+  border-top: 1px solid var(--ink);
+}
+.marathon-icon { font-family: var(--sans); font-size: 36px; font-weight: 900; color: var(--purple); flex-shrink: 0; }
+.marathon-text h3 { font-family: var(--sans); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+.marathon-text p { font-size: 14px; font-weight: 300; line-height: 1.65; color: rgba(255,255,255,0.65); max-width: 640px; }
+
+/* ── LEARNING STRIP ── */
+.learning-strip {
+  border-top: 1px solid var(--ink);
+  display: grid; grid-template-columns: 280px 1fr;
+}
+.learning-left {
+  border-right: 1px solid var(--ink); padding: 40px;
+  display: flex; flex-direction: column; justify-content: center; gap: 10px;
+}
+.learning-label { font-size: 9px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--purple); }
+.learning-title { font-family: var(--sans); font-size: 20px; font-weight: 900; text-transform: uppercase; letter-spacing: -0.5px; line-height: 1.1; }
+.learning-right {
+  padding: 40px 64px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+}
+.learning-item {
+  display: flex; flex-direction: column; gap: 6px;
+  padding-right: 24px; border-right: 1px solid var(--light);
+  padding-left: 24px;
+}
+.learning-item:first-child { padding-left: 0; }
+.learning-item:last-child { border-right: none; }
+.learning-course { font-family: var(--sans); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.3; }
+.learning-org { font-size: 12px; color: var(--gray); font-weight: 300; }
+
+/* ── EDUCATION ROW ── */
+.education-row {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--ink);
+}
+.edu-cell { padding: 32px 40px; border-right: 1px solid var(--ink); }
+.edu-cell:last-child { border-right: none; }
+.edu-label { font-size: 9px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--purple); margin-bottom: 10px; }
+.edu-cell h4 { font-family: var(--sans); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 4px; }
+.edu-cell p { font-size: 12px; color: var(--gray); line-height: 1.5; }
+
+/* ── AWARD STRIP ── */
+.award-strip {
+  border-top: 1px solid var(--ink);
+  display: grid; grid-template-columns: 280px 1fr;
+}
+.award-left {
+  border-right: 1px solid var(--ink); padding: 40px 40px;
+  display: flex; flex-direction: column; justify-content: center; gap: 10px;
+}
+.award-label { font-size: 9px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--purple); }
+.award-title { font-family: var(--sans); font-size: 16px; font-weight: 900; text-transform: uppercase; letter-spacing: -0.3px; line-height: 1.15; }
+.award-right { padding: 40px 64px; display: flex; align-items: center; }
+.award-right p { font-size: 14px; font-weight: 300; line-height: 1.75; color: #444; max-width: 640px; }
+
+/* ── EXPERIENCE ── */
+#experience { border-bottom: 1px solid var(--ink); }
+.exp-row {
+  display: grid; grid-template-columns: 240px 1fr 1fr;
+  border-bottom: 1px solid var(--ink); align-items: stretch;
+}
+.exp-row:last-child { border-bottom: none; }
+.exp-meta { border-right: 1px solid var(--ink); padding: 48px 40px; display: flex; flex-direction: column; gap: 10px; }
+.exp-company { font-family: var(--sans); font-size: 18px; font-weight: 900; text-transform: uppercase; letter-spacing: -0.3px; }
+.exp-company-link {
+  font-family: var(--sans); font-size: 18px; font-weight: 900; text-transform: uppercase; letter-spacing: -0.3px;
+  color: var(--ink); text-decoration: none; border-bottom: 2px solid var(--purple);
+  transition: color .15s;
+}
+.exp-company-link:hover { color: var(--purple); }
+.exp-role { font-size: 11px; font-weight: 500; color: var(--purple); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 4px; }
+.exp-period { font-size: 11px; color: var(--gray); letter-spacing: 0.04em; text-transform: uppercase; margin-top: 4px; }
+.exp-main { border-right: 1px solid var(--ink); padding: 48px 48px; }
+.exp-main p { font-size: 14px; font-weight: 300; line-height: 1.75; color: #333; }
+.exp-main p + p { margin-top: 12px; }
+.exp-main strong { font-weight: 500; color: var(--ink); }
+.exp-outcomes { padding: 48px 48px; display: flex; flex-direction: column; gap: 12px; }
+.exp-outcome-label { font-family: var(--sans); font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+.outcome-item { display: flex; align-items: baseline; gap: 10px; }
+.outcome-val { font-family: var(--sans); font-size: 22px; font-weight: 900; letter-spacing: -0.5px; color: var(--purple); flex-shrink: 0; line-height: 1; }
+.outcome-desc { font-size: 11px; color: var(--gray); line-height: 1.4; text-transform: uppercase; letter-spacing: 0.04em; }
+
+/* ── AI SECTION ── */
+.ai-section {
+  border-bottom: 1px solid var(--ink);
+  display: grid; grid-template-columns: 1fr 1fr;
+}
+.ai-left {
+  border-right: 1px solid var(--ink); padding: 64px 48px;
+}
+.ai-big {
+  font-family: var(--sans); font-size: clamp(40px, 6vw, 76px); font-weight: 900;
+  line-height: 0.9; letter-spacing: -2px; text-transform: uppercase; margin-bottom: 36px;
+}
+.ai-big .acc { color: var(--purple); }
+.ai-desc { font-size: 15px; font-weight: 300; line-height: 1.75; color: #333; }
+.ai-desc p + p { margin-top: 12px; }
+.ai-right { padding: 64px 48px; display: flex; flex-direction: column; gap: 0; }
+.ai-tool-row {
+  padding: 28px 0; border-bottom: 1px solid var(--light);
+  display: flex; gap: 20px; align-items: flex-start;
+}
+.ai-tool-row:last-child { border-bottom: none; }
+.ai-tool-name { font-family: var(--sans); font-size: 16px; font-weight: 900; text-transform: uppercase; letter-spacing: -0.2px; width: 96px; flex-shrink: 0; color: var(--purple); }
+.ai-tool-body h4 { font-family: var(--sans); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+.ai-tool-body p { font-size: 13px; font-weight: 300; color: #555; line-height: 1.6; }
+
+/* ── SKILLS ── */
+#skills { border-bottom: 1px solid var(--ink); }
+.skills-body { display: grid; grid-template-columns: 1fr 1fr; }
+.skills-left { border-right: 1px solid var(--ink); padding: 64px 48px; display: flex; align-items: center; }
+.skills-big {
+  font-family: var(--sans); font-size: clamp(44px, 6.5vw, 84px); font-weight: 900;
+  line-height: 0.88; letter-spacing: -2px; text-transform: uppercase;
+}
+.skills-big .acc { color: var(--purple); display: block; }
+.skills-right { }
+.skill-row { display: grid; grid-template-columns: 64px 1fr; border-bottom: 1px solid var(--ink); align-items: stretch; }
+.skill-row:last-child { border-bottom: none; }
+.skill-idx {
+  border-right: 1px solid var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--sans); font-size: 10px; font-weight: 700; color: var(--gray); letter-spacing: 0.06em;
+}
+.skill-content { padding: 20px 28px; }
+.skill-name { font-family: var(--sans); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag {
+  font-size: 10px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase;
+  padding: 4px 9px; border: 1px solid var(--ink); color: var(--ink); transition: background .12s, color .12s; cursor: default;
+}
+.tag:hover { background: var(--ink); color: var(--white); }
+.tag.p { border-color: var(--purple); color: var(--purple); }
+.tag.p:hover { background: var(--purple); color: var(--white); }
+
+/* ── CASES ── */
+#cases { border-bottom: 1px solid var(--ink); }
+.case-row { display: grid; grid-template-columns: 80px 1fr 1fr; border-bottom: 1px solid var(--ink); align-items: stretch; }
+.case-row:last-child { border-bottom: none; }
+.case-idx {
+  border-right: 1px solid var(--ink);
+  display: flex; align-items: flex-start; justify-content: center; padding: 40px 0 0;
+  font-family: var(--sans); font-size: 10px; font-weight: 700; color: var(--gray); letter-spacing: 0.06em;
+}
+.case-left { border-right: 1px solid var(--ink); padding: 40px 44px; }
+.case-cat { font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--purple); margin-bottom: 14px; }
+.case-left h3 { font-family: var(--sans); font-size: 16px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.15; margin-bottom: 14px; }
+.case-left p { font-size: 13px; color: #555; line-height: 1.65; font-weight: 300; }
+.case-right { padding: 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+.case-metrics { display: flex; flex-direction: column; gap: 12px; }
+.case-metric { display: flex; align-items: baseline; gap: 10px; }
+.metric-val { font-family: var(--sans); font-size: 24px; font-weight: 900; letter-spacing: -0.5px; color: var(--purple); flex-shrink: 0; }
+.metric-desc { font-size: 11px; color: var(--gray); line-height: 1.4; text-transform: uppercase; letter-spacing: 0.04em; }
+.case-quote { font-size: 13px; font-style: italic; color: var(--gray); line-height: 1.65; padding-left: 14px; border-left: 2px solid var(--purple); }
+.case-cite { font-size: 10px; color: var(--gray); margin-top: 10px; font-style: normal; letter-spacing: 0.04em; text-transform: uppercase; }
+
+/* ── TESTIMONIAL ── */
+.testimonial {
+  border-bottom: 1px solid var(--ink);
+  display: grid; grid-template-columns: 240px 1fr;
+}
+.testi-left {
+  border-right: 1px solid var(--ink); padding: 48px 40px;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.testi-label { font-family: var(--sans); font-size: 9px; font-weight: 700; color: var(--purple); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 24px; }
+.testi-name { font-family: var(--sans); font-size: 15px; font-weight: 900; text-transform: uppercase; letter-spacing: -0.2px; }
+.testi-role { font-size: 11px; color: var(--gray); margin-top: 4px; }
+.testi-right { padding: 48px 64px; display: flex; align-items: center; }
+.testi-quote {
+  font-size: 16px; font-weight: 300; font-style: italic; line-height: 1.75; color: var(--ink);
+  padding-left: 24px; border-left: 3px solid var(--purple);
+  max-width: 700px;
+}
+
+/* ── NARRATIVE BRIDGES ── */
+.cases-bridge {
+  padding: 32px 48px 0;
+  border-bottom: none;
+}
+.cases-bridge p {
+  font-size: 15px; font-weight: 300; color: var(--gray);
+  line-height: 1.75; max-width: 760px;
+}
+.section-bridge {
+  padding: 24px 48px;
+  border-bottom: 1px solid var(--ink);
+  display: flex; align-items: center; gap: 16px;
+}
+.section-bridge::before {
+  content: '↓';
+  font-family: var(--sans); font-size: 11px; font-weight: 700;
+  color: var(--purple); flex-shrink: 0;
+}
+.section-bridge p {
+  font-size: 12px; font-weight: 400; color: var(--gray);
+  letter-spacing: 0.04em; text-transform: uppercase;
+}
+
+/* ── CTA STRIP ── */
+.cta-strip {
+  border-bottom: 1px solid var(--ink);
+  padding: 40px 48px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 32px;
+}
+.cta-text { font-size: 18px; font-weight: 300; color: var(--ink); }
+.cta-btn {
+  font-family: var(--sans); font-size: 12px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--white); background: var(--purple);
+  padding: 14px 28px; text-decoration: none; flex-shrink: 0;
+  transition: background .15s;
+}
+.cta-btn:hover { background: var(--ink); }
+
+/* ── LOOKING ── */
+.looking {
+  border-bottom: 1px solid var(--ink); background: var(--ink); color: var(--white);
+  padding: 80px 48px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+}
+.looking-headline {
+  font-family: var(--sans); font-size: clamp(44px, 6vw, 80px); font-weight: 900;
+  line-height: 0.88; letter-spacing: -2px; text-transform: uppercase;
+}
+.looking-headline .acc { color: var(--purple); }
+.looking-items { display: flex; flex-direction: column; gap: 18px; }
+.looking-item { padding: 22px 24px; border: 1px solid rgba(255,255,255,0.12); display: flex; gap: 14px; }
+.li-arrow { font-family: var(--sans); font-size: 10px; font-weight: 700; color: var(--purple); text-transform: uppercase; flex-shrink: 0; margin-top: 2px; }
+.li-body h4 { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 5px; }
+.li-body p { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.55; font-weight: 300; }
+
+/* ── CONTACT ── */
+#contact { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--ink); min-height: 320px; }
+.contact-left { border-right: 1px solid var(--ink); padding: 64px 48px; display: flex; flex-direction: column; justify-content: space-between; }
+.contact-big { font-family: var(--sans); font-size: clamp(34px, 4.5vw, 58px); font-weight: 900; text-transform: uppercase; letter-spacing: -1px; line-height: 0.92; }
+.contact-big .acc { color: var(--purple); }
+.contact-sub { font-size: 14px; color: var(--gray); font-weight: 300; line-height: 1.65; margin-top: 24px; max-width: 360px; }
+.contact-right { padding: 64px 48px; display: flex; flex-direction: column; }
+.contact-link {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 26px 0; border-bottom: 1px solid var(--ink);
+  text-decoration: none; color: var(--ink);
+}
+.contact-link:first-child { border-top: 1px solid var(--ink); }
+.contact-link:hover .cl-arrow { transform: translate(4px,-4px); }
+.cl-left { display: flex; flex-direction: column; gap: 4px; }
+.cl-platform { font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--purple); }
+.cl-name { font-family: var(--sans); font-size: 17px; font-weight: 700; text-transform: uppercase; }
+.cl-arrow { font-size: 22px; color: var(--gray); transition: transform .2s; }
+
+/* ── FOOTER ── */
+footer { display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; font-size: 10px; color: var(--gray); letter-spacing: 0.08em; text-transform: uppercase; }
+footer span { color: var(--ink); font-weight: 500; }
+
+/* ── REVEAL ── */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.in { opacity: 1; transform: none; }
+.d1 { transition-delay: .08s; }
+.d2 { transition-delay: .16s; }
+.d3 { transition-delay: .24s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  nav { padding: 0 24px; }
+  .nav-links, .nav-cta { display: none; }
+  .hero, .about-grid, .ai-section, .skills-body, .looking, #contact { grid-template-columns: 1fr; }
+  .hero-left, .about-left, .ai-left, .skills-left, .contact-left { border-right: none; border-bottom: 1px solid var(--ink); }
+  .hero-left, .hero-right, .about-left, .about-right, .ai-left, .ai-right,
+  .skills-left, .contact-left, .contact-right, .looking { padding: 40px 24px; }
+  .sh { padding: 14px 24px; }
+  .exp-row { grid-template-columns: 1fr; }
+  .exp-meta { border-right: none; border-bottom: 1px solid var(--ink); padding: 32px 24px; }
+  .exp-main { border-right: none; border-bottom: 1px solid var(--ink); padding: 32px 24px; }
+  .exp-outcomes { padding: 32px 24px; }
+  .case-row { grid-template-columns: 48px 1fr; }
+  .case-left { border-right: none; border-bottom: 1px solid var(--ink); grid-column: 2; }
+  .case-right { grid-column: 2; }
+  .case-left, .case-right { padding: 28px 20px; }
+  .testimonial { grid-template-columns: 1fr; }
+  .testi-left { border-right: none; border-bottom: 1px solid var(--ink); }
+  .testi-right { padding: 40px 24px; }
+  .learning-strip { grid-template-columns: 1fr; }
+  .learning-left { border-right: none; border-bottom: 1px solid var(--ink); padding: 32px 24px; }
+  .learning-right { grid-template-columns: 1fr 1fr; padding: 32px 24px; gap: 24px; }
+  .learning-item { padding: 0; border-right: none; border-bottom: 1px solid var(--light); padding-bottom: 16px; }
+  .learning-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .education-row { grid-template-columns: 1fr 1fr; }
+  .edu-cell { padding: 24px; }
+  .award-strip { grid-template-columns: 1fr; }
+  .award-left { border-right: none; border-bottom: 1px solid var(--ink); padding: 32px 24px; }
+  .award-right { padding: 32px 24px; }
+  .marathon-strip { flex-direction: column; gap: 20px; padding: 40px 24px; }
+  footer { padding: 16px 24px; flex-direction: column; gap: 4px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-name">Palina Mushtukova</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#cases">Cases</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Let's talk →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Product Manager</p>
+    <h1 class="hero-headline">
+      <span>BUILDING</span>
+      <span class="acc">MEANINGFUL</span>
+      <span>PRODUCTS.</span>
+    </h1>
+    <div class="hero-bottom">
+      <a href="#about" class="hero-scroll">↓</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <p class="hero-intro">
+      Hi, I'm Palina Mushtukova — and I build products that make people's lives genuinely better. Most of my journey has been rooted in <em class="mark">education</em> — because I believe it is one of the most powerful ways to shape confidence, capability, and a person's future. I combine product thinking, strong ownership, <strong>data depth</strong>, and <strong>AI-enabled execution</strong> to build products that matter.
+    </p>
+    <div class="hero-stats">
+      <div class="stat-box">
+        <span class="stat-num">−50%</span>
+        <p class="stat-label">Refunds reduced<br>at Kodland</p>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">+59%</span>
+        <p class="stat-label">YoY netLTV growth<br>Math · Kodland</p>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">5.6%</span>
+        <p class="stat-label">E2E conversion<br>0→1 MVP launch</p>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">150+</span>
+        <p class="stat-label">Students/year<br>SimpleChem</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="sh">
+    <span class="sh-num">01 —</span>
+    <span class="sh-title">About me</span>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-left">
+      <h2 class="about-big reveal">I BUILD<br><span class="acc">PRODUCTS</span><br>THAT HELP<br>PEOPLE<br>GROW.</h2>
+      <div class="about-desc reveal d1">
+        <p>My strongest internal compass has always been meaning. I'm at my best when I work on something that helps people become stronger, smarter, more confident — or simply better supported in their daily lives.</p>
+        <p>This is why most of my experience is rooted in <strong>education</strong>. To me, education is one of the most transformative tools in the world. It shapes how people think, what they believe about themselves, and what opportunities become possible for them.</p>
+        <p>At the same time, I'm <strong>deeply analytical and technically curious</strong>. I genuinely love numbers. I love pressure-testing assumptions, finding broken logic, understanding systems, and getting to the real reason something works — or doesn't.</p>
+        <p>I'm most drawn to products at the intersection of <strong>education, technology, AI, and meaningful human impact</strong>.</p>
+      </div>
+    </div>
+
+    <div class="about-right">
+      <div class="principle-item reveal">
+        <p class="p-label">What defines me — 01</p>
+        <h3>Meaning first</h3>
+        <p>I care deeply about building products that actually matter. I want to work on things that improve people's lives — not just fill screens or chase short-term wins.</p>
+      </div>
+      <div class="principle-item reveal d1">
+        <p class="p-label">What defines me — 02</p>
+        <h3>Data depth</h3>
+        <p>I'm a real analytics nerd. I love numbers, product logic, and business mechanics. I trust intuition, but I verify through data. I'm very comfortable operating close to the data.</p>
+      </div>
+      <div class="principle-item reveal d2">
+        <p class="p-label">What defines me — 03</p>
+        <h3>Long-term mindset</h3>
+        <p>Great products are built through consistency, resilience, and smart long-term work. I know how to keep momentum through ambiguity, complexity, and plateaus.</p>
+      </div>
+      <div class="principle-item reveal d3">
+        <p class="p-label">What defines me — 04</p>
+        <h3>Technology as leverage</h3>
+        <p>I love working in modern product environments where analytics, experimentation, AI, and strong cross-functional collaboration create real leverage and better outcomes.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="marathon-strip reveal">
+    <div class="marathon-icon">✦</div>
+    <div class="marathon-text">
+      <h3>A private note about me — and it's very much me.</h3>
+      <p>I'm a marathon runner. Not just literally, but in the way I work. I think long-term, hold the pace, and know how to keep building when things get hard, messy, or slow. I've learned that consistency compounds. That showing up when progress isn't visible is exactly when the most important work happens. When others get tired of the distance, I keep building.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="sh">
+    <span class="sh-num">02 —</span>
+    <span class="sh-title">Experience</span>
+  </div>
+
+  <!-- EWA -->
+  <div class="exp-row reveal">
+    <div class="exp-meta">
+      <a href="https://appewa.com/" target="_blank" class="exp-company-link">EWA</a>
+      <span class="exp-role">Product Manager</span>
+      <span class="exp-period">2025 — Present</span>
+    </div>
+    <div class="exp-main">
+      <p>At EWA, I own the product revenue stream end-to-end — across monetization strategy, product decisions, and a cross-functional team of iOS/Android engineers, QA, analyst, and designer.</p>
+      <p>One of my first moves was a <strong>full analytical audit</strong> of the revenue area: I connected directly to ClickHouse via MCP and used Cursor to run deep exploratory analysis across the data. Within one week, I had a clear picture of where value was leaking, what the real growth levers were, and what the team had been missing. That audit became the foundation for the <strong>team's entire quarterly backlog</strong>.</p>
+      <p>This is how I work: I don't wait for someone to hand me insights. I go get them — with the right tools, at the right depth, fast enough to actually matter.</p>
+    </div>
+    <div class="exp-outcomes">
+      <p class="exp-outcome-label">How I work here</p>
+      <div class="outcome-item">
+        <span class="outcome-val">1W</span>
+        <span class="outcome-desc">Full analytics audit → quarterly backlog</span>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-val">MCP</span>
+        <span class="outcome-desc">ClickHouse + Cursor for deep data work</span>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-val">E2E</span>
+        <span class="outcome-desc">Revenue ownership across full product cycle</span>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-val">6</span>
+        <span class="outcome-desc">People in cross-functional product team</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kodland -->
+  <div class="exp-row reveal">
+    <div class="exp-meta">
+      <a href="https://www.kodland.org/" target="_blank" class="exp-company-link">Kodland</a>
+      <span class="exp-role">Product Owner · Faculty Lead, Math</span>
+      <span class="exp-period">2023 — 2025</span>
+    </div>
+    <div class="exp-main">
+      <p>Led the Math direction across product, learning experience, growth, and operations. A role that required both strategic thinking and a lot of systems work: improving the product itself, strengthening the learning experience, working on business metrics, and shaping a more scalable product across markets.</p>
+      <p>A significant part of the work was <strong>launching and scaling products into new markets</strong> — LATAM, MENA, Asia, Europe, and CIS. Each market brought different learner behaviour, different acquisition dynamics, and different content requirements. I worked across all of them.</p>
+      <p>Over time, Math became the <strong>quickest-growing product</strong> in the portfolio. Product and learning metrics improved year over year, refunds were reduced by 50%, and actual netLTV showed strong year-over-year growth.</p>
+    </div>
+    <div class="exp-outcomes">
+      <p class="exp-outcome-label">Selected outcomes</p>
+      <div class="outcome-item">
+        <span class="outcome-val">5</span>
+        <span class="outcome-desc">Markets launched · LATAM, MENA, Asia, Europe, CIS</span>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-val">x1.8</span>
+        <span class="outcome-desc">netLTV growth · Math</span>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-val">−50%</span>
+        <span class="outcome-desc">Refunds reduced</span>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-val">№1</span>
+        <span class="outcome-desc">Quickest-growing product in Kodland portfolio</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SimpleChem -->
+  <div class="exp-row reveal">
+    <div class="exp-meta">
+      <span class="exp-company">Simple<br>Chem</span>
+      <span class="exp-role">Founder</span>
+      <span class="exp-period">2021 — 2024</span>
+    </div>
+    <div class="exp-main">
+      <p>SimpleChem is the project I'm most personally proud of. I started it from a belief that chemistry — one of the most feared school subjects — could become something teenagers actually enjoy, if someone built the right product around it.</p>
+      <p>I did everything solo: product vision, curriculum logic, UX, onboarding, monetisation, delivery operations, and tutor coordination. No team. No funding. No playbook. Just a clear idea of what the learner needed and the determination to build it right.</p>
+      <p>It was profitable from day one. It grew to 150+ active students per year across 6+ learning formats. And it taught me something no job could: what it actually feels like to <strong>own every decision and live with every outcome</strong>.</p>
+      <p>SimpleChem shaped how I think about product. It should be clear, honest, and built with genuine respect for the person using it.</p>
+    </div>
+    <div class="exp-outcomes">
+      <p class="exp-outcome-label">Selected outcomes</p>
+      <div class="outcome-item">
+        <span class="outcome-val">Day 1</span>
+        <span class="outcome-desc">Profitable from first cohort</span>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-val">150+</span>
+        <span class="outcome-desc">Active students annually</span>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-val">6+</span>
+        <span class="outcome-desc">Learning formats built solo</span>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-val">0→1</span>
+        <span class="outcome-desc">Full product cycle owned end-to-end</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-bridge reveal">
+  <p>The way I work today — how I approach data, discovery, and delivery</p>
+</div>
+
+<!-- AI SECTION -->
+<div class="ai-section">
+  <div class="ai-left">
+    <h2 class="ai-big reveal">AI AS<br><span class="acc">LEVER</span><br>AGE.</h2>
+    <div class="ai-desc reveal d1">
+      <p>AI is a real part of how I work — not a trend I'm catching up to. I use it daily across discovery, analytics, prototyping, and delivery.</p>
+      <p>The real value isn't speed. It's depth: AI gives me space to go further into the problem, not just get to an answer faster. I move faster on execution so I can invest more in thinking.</p>
+    </div>
+  </div>
+  <div class="ai-right">
+    <div class="ai-tool-row reveal">
+      <span class="ai-tool-name">CURSOR</span>
+      <div class="ai-tool-body">
+        <h4>Deep analytics & discovery</h4>
+        <p>At EWA, I connected directly to ClickHouse via MCP and ran a full analytical audit of the revenue area in one week — mapping leaking value, identifying real growth levers, and building the team's entire quarterly backlog from the findings.</p>
+      </div>
+    </div>
+    <div class="ai-tool-row reveal d1">
+      <span class="ai-tool-name">CLAUDE</span>
+      <div class="ai-tool-body">
+        <h4>Prototyping & structured thinking</h4>
+        <p>Solution exploration, rapid prototyping, structured problem framing — accelerating delivery without losing depth. This portfolio was also built with Claude.</p>
+      </div>
+    </div>
+    <div class="ai-tool-row reveal d2">
+      <span class="ai-tool-name">RESULT</span>
+      <div class="ai-tool-body">
+        <h4>More depth, not just more speed</h4>
+        <p>I move faster on the analytical and delivery side so I can invest more in the strategic and qualitative side. That's the actual leverage.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="sh">
+    <span class="sh-num">03 —</span>
+    <span class="sh-title">Knowledge & Tools</span>
+  </div>
+  <div class="skills-body">
+    <div class="skills-left">
+      <div class="skills-big reveal">
+        KNOW<span class="acc">LEDGE</span>&amp;<br>TOOLS.
+      </div>
+    </div>
+    <div class="skills-right">
+      <div class="skill-row">
+        <div class="skill-idx">01</div>
+        <div class="skill-content">
+          <p class="skill-name">Product</p>
+          <div class="skill-tags">
+            <span class="tag p">Product Strategy</span>
+            <span class="tag p">Discovery (Qual & Quant)</span>
+            <span class="tag p">International Scaling</span>
+            <span class="tag p">Monetization & Unit Economics</span>
+          </div>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-idx">02</div>
+        <div class="skill-content">
+          <p class="skill-name">Analytics</p>
+          <div class="skill-tags">
+            <span class="tag p">A/B Testing & Cohort Analysis</span>
+            <span class="tag p">Metrics Tree Design</span>
+            <span class="tag p">SQL & ClickHouse</span>
+            <span class="tag p">Dashboard & Analytics Process</span>
+          </div>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-idx">03</div>
+        <div class="skill-content">
+          <p class="skill-name">AI-enabled PM work</p>
+          <div class="skill-tags">
+            <span class="tag p">Cursor + MCP (ClickHouse)</span>
+            <span class="tag p">Claude for Prototyping</span>
+            <span class="tag p">AI-assisted Discovery</span>
+            <span class="tag p">Time-to-Insight Acceleration</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEARNING BLOCK -->
+  <div class="learning-strip reveal">
+    <div class="learning-left">
+      <p class="learning-label">Continuous learning</p>
+      <h3 class="learning-title">I never<br>stop learning.</h3>
+    </div>
+    <div class="learning-right">
+      <div class="learning-item">
+        <span class="learning-course">Learning Experience Design</span>
+        <span class="learning-org">Universal University</span>
+      </div>
+      <div class="learning-item">
+        <span class="learning-course">Gamification</span>
+        <span class="learning-org">CG Education</span>
+      </div>
+      <div class="learning-item">
+        <span class="learning-course">Product Management</span>
+        <span class="learning-org">Wanna Be Like</span>
+      </div>
+      <div class="learning-item">
+        <span class="learning-course">Data-driven Decision Making</span>
+        <span class="learning-org">Go Practice Simulator</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- AWARD -->
+  <div class="award-strip reveal">
+    <div class="award-left">
+      <p class="award-label">Recognition</p>
+      <h3 class="award-title">Belarus Future<br>Leadership Award</h3>
+    </div>
+    <div class="award-right">
+      <p>This award means a lot to me because it reflects something that has always been important in the way I work: initiative, drive, and the ability to move things forward with ownership. It also reflects a part of me that goes beyond product — a genuine belief that education and access to opportunity can change lives.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-bridge reveal">
+  <p>The thinking behind the work — learning design roots that shape my product approach</p>
+</div>
+
+<!-- CASES -->
+<section id="cases">
+  <div class="sh">
+    <span class="sh-num">04 —</span>
+    <span class="sh-title">Learning Experience Cases</span>
+  </div>
+
+  <div class="cases-bridge reveal">
+    <p>Before and alongside product management, I built deep expertise in learning experience design. These cases show the thinking that still shapes how I approach product today — I don't see products as funnels or feature sets, but as systems people move through, learn through, and experience emotionally.</p>
+  </div>
+
+  <div class="case-row reveal">
+    <div class="case-idx">01</div>
+    <div class="case-left">
+      <p class="case-cat">LX Design · Yandex Practicum</p>
+      <h3>Metacognitive Course for React Developers</h3>
+      <p><strong>Problem:</strong> High student support load was killing margins on the React Developer program — without changing the completion rate.</p>
+      <p style="margin-top:10px"><strong>Solution:</strong> Built an async "wrapper" course using the 4C/ID model — 3 cycles of self-regulated learning that gradually shifted students from external to internal control of their learning process.</p>
+      <p style="margin-top:10px"><strong>Insight:</strong> The real problem wasn't content quality — it was that students had no metacognitive tools to handle stuck moments alone.</p>
+    </div>
+    <div class="case-right">
+      <p class="case-quote">"Your team resisted the temptation to focus on solutions proposed in the brief. You highlighted both UX impact and non-obvious risks — significantly increasing credibility."</p>
+      <p class="case-cite">— Madin Tlishev, PM, Yandex Practicum</p>
+    </div>
+  </div>
+
+  <div class="case-row reveal">
+    <div class="case-idx">02</div>
+    <div class="case-left">
+      <p class="case-cat">LX Design · Toloka AI</p>
+      <h3>ML Onboarding with Full Business Game</h3>
+      <p><strong>Problem:</strong> New Toloka employees couldn't communicate effectively across technical and non-technical ML contexts — slowing down cross-functional work from day one.</p>
+      <p style="margin-top:10px"><strong>Solution:</strong> Designed a 4C/ID-based onboarding course with three-level scaffolding, a full business simulation game, and mock-interview assessment.</p>
+      <p style="margin-top:10px"><strong>Insight:</strong> Onboarding fails when it teaches concepts in isolation. Simulating real communication scenarios — under pressure — is what actually builds confidence.</p>
+    </div>
+    <div class="case-right">
+      <p class="case-quote">"Palina managed to do the impossible. The subject area of ML is very complex — yet employees enthusiastically joined, gained the necessary knowledge, and are satisfied with the outcomes."</p>
+      <p class="case-cite">— Anastasia Zhdanovskaya, LX Designer, Toloka AI</p>
+    </div>
+  </div>
+
+  <div class="case-row reveal">
+    <div class="case-idx">03</div>
+    <div class="case-left">
+      <p class="case-cat">LX Design · Letovo IB School</p>
+      <h3>STEM Intensive for Regional Students & Teachers</h3>
+      <p><strong>Problem:</strong> Design a 7–10 day STEM intensive that serves two very different audiences simultaneously — students and teachers — while reducing investor costs and building school brand.</p>
+      <p style="margin-top:10px"><strong>Solution:</strong> Built a modular program-constructor with hybrid format: online onboarding + offline intensive + interdisciplinary workshops that worked for both audiences in parallel.</p>
+      <p style="margin-top:10px"><strong>Insight:</strong> The hardest constraint wasn't content — it was aligning the goals of students who want to learn and teachers who want to grow professionally, inside the same program.</p>
+    </div>
+    <div class="case-right">
+      <p class="case-quote">"Palina was one of the leaders of the LXD team — she tracked timing, initiated each stage, and managed communication with the client. We are planning to implement the project."</p>
+      <p class="case-cite">— Olga Kalimulina, Community Lead, IB Letovo School</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<div class="testimonial reveal">
+  <div class="testi-left">
+    <p class="testi-label">What leaders say</p>
+    <div>
+      <p class="testi-name">Oleg</p>
+      <p class="testi-role">Co-Founder at Kodland</p>
+    </div>
+  </div>
+  <div class="testi-right">
+    <blockquote class="testi-quote">
+      "Palina showed strong ownership and reliability across every project. She's very self-driven — able to move things forward independently, spot problems early, and take responsibility for solving them. What I especially appreciate is her attention to detail, focus on delivery, and willingness to learn and improve. She doesn't wait to be told what to do — she takes initiative and follows through. I would be genuinely happy to work with Palina again."
+    </blockquote>
+  </div>
+</div>
+
+<!-- WHERE I DO MY BEST WORK -->
+<div class="looking reveal">
+  <h2 class="looking-headline">WHERE I DO<br>MY <span class="acc">BEST</span><br>WORK.</h2>
+  <div class="looking-items">
+    <div class="looking-item">
+      <span class="li-arrow">→</span>
+      <div class="li-body">
+        <h4>Products that matter</h4>
+        <p>The best roles sit at the intersection of real user value, strategic depth, and meaningful impact. Education, AI-enabled products, and adjacent domains where technology improves people's lives.</p>
+      </div>
+    </div>
+    <div class="looking-item">
+      <span class="li-arrow">→</span>
+      <div class="li-body">
+        <h4>Teams that think deeply</h4>
+        <p>I do my best work in teams that care about quality and want to build something truly useful — not just ship fast for the sake of shipping.</p>
+      </div>
+    </div>
+    <div class="looking-item">
+      <span class="li-arrow">→</span>
+      <div class="li-body">
+        <h4>Strong product environments</h4>
+        <p>Analytics, experimentation, AI, and real cross-functional collaboration. Environments where data depth and execution quality actually affect outcomes.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-left">
+    <div>
+      <h2 class="contact-big reveal">LET'S<br>BUILD<br><span class="acc">TOGETHER.</span></h2>
+      <p class="contact-sub">Whether you're scaling an EdTech product, launching from scratch, or need a PM who brings data depth, ownership, and real meaning to the work — I'd love to connect.</p>
+    </div>
+  </div>
+  <div class="contact-right">
+    <a href="https://www.linkedin.com/in/palina-mushtukova/" class="contact-link" target="_blank">
+      <div class="cl-left">
+        <span class="cl-platform">LinkedIn</span>
+        <span class="cl-name">Palina Mushtukova</span>
+      </div>
+      <span class="cl-arrow">↗</span>
+    </a>
+    <a href="https://t.me/palina_mushtukova" class="contact-link" target="_blank">
+      <div class="cl-left">
+        <span class="cl-platform">Telegram</span>
+        <span class="cl-name">Write directly</span>
+      </div>
+      <span class="cl-arrow">↗</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <span>Palina Mushtukova</span>
+  <span>Product Manager · EdTech · AI</span>
+  <span>Building meaningful products.</span>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
