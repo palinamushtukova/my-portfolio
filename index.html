@@ -20,7 +20,7 @@ html { scroll-behavior: smooth; }
   --body: 'Inter', system-ui, sans-serif;
 }
 body { font-family: var(--body); background: var(--white); color: var(--ink); overflow-x: hidden; }
-
+ 
 /* ── NAV ── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -49,7 +49,7 @@ nav {
   text-decoration: none; color: var(--purple); transition: background .15s, color .15s;
 }
 .nav-cta:hover { background: var(--purple); color: var(--white); }
-
+ 
 /* ── HERO ── */
 .hero {
   margin-top: 56px; border-bottom: 1px solid var(--ink);
@@ -107,7 +107,7 @@ nav {
   letter-spacing: -1px; color: var(--purple); display: block; line-height: 1.1;
 }
 .stat-label { font-size: 11px; color: var(--gray); margin-top: 6px; line-height: 1.45; text-transform: uppercase; letter-spacing: 0.05em; }
-
+ 
 /* ── SECTION HEADER ── */
 .sh {
   border-bottom: 1px solid var(--ink); padding: 18px 48px;
@@ -115,18 +115,24 @@ nav {
 }
 .sh-num { font-family: var(--sans); font-size: 10px; font-weight: 700; color: var(--purple); letter-spacing: 0.1em; text-transform: uppercase; }
 .sh-title { font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); }
-
+ 
 /* ── ABOUT ── */
 #about { border-bottom: 1px solid var(--ink); }
+.about-single { border-bottom: 1px solid var(--ink); padding: 80px 48px; }
+.about-single-inner {
+  display: grid; grid-template-columns: 1fr 1.3fr;
+  gap: 64px;
+  max-width: 1280px;
+}
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--ink); }
 .about-left { border-right: 1px solid var(--ink); padding: 64px 48px; }
 .about-big {
   font-family: var(--sans); font-size: clamp(34px, 4.5vw, 60px); font-weight: 900;
-  line-height: 0.93; letter-spacing: -1.5px; text-transform: uppercase; margin-bottom: 40px;
+  line-height: 0.93; letter-spacing: -1.5px; text-transform: uppercase; margin-bottom: 0;
 }
 .about-big .acc { color: var(--purple); }
-.about-desc { font-size: 15px; font-weight: 300; line-height: 1.78; color: #333; }
-.about-desc p + p { margin-top: 14px; }
+.about-desc { font-size: 16px; font-weight: 300; line-height: 1.8; color: #333; }
+.about-desc p + p { margin-top: 16px; }
 .about-desc strong { font-weight: 500; color: var(--ink); }
 .about-right { padding: 64px 48px; display: flex; flex-direction: column; gap: 0; }
 .principle-item { padding: 28px 0; border-bottom: 1px solid var(--light); }
@@ -135,7 +141,7 @@ nav {
 .p-label { font-family: var(--sans); font-size: 9px; font-weight: 700; color: var(--purple); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
 .principle-item h3 { font-family: var(--sans); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
 .principle-item p { font-size: 13px; color: #555; line-height: 1.65; font-weight: 300; }
-
+ 
 /* Marathon strip */
 .marathon-strip {
   background: var(--ink); color: var(--white);
@@ -146,7 +152,7 @@ nav {
 .marathon-icon { font-family: var(--sans); font-size: 36px; font-weight: 900; color: var(--purple); flex-shrink: 0; }
 .marathon-text h3 { font-family: var(--sans); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
 .marathon-text p { font-size: 14px; font-weight: 300; line-height: 1.65; color: rgba(255,255,255,0.65); max-width: 640px; }
-
+ 
 /* ── LEARNING STRIP ── */
 .learning-strip {
   border-top: 1px solid var(--ink);
@@ -160,18 +166,18 @@ nav {
 .learning-title { font-family: var(--sans); font-size: 20px; font-weight: 900; text-transform: uppercase; letter-spacing: -0.5px; line-height: 1.1; }
 .learning-right {
   padding: 40px 64px;
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 0;
 }
 .learning-item {
   display: flex; flex-direction: column; gap: 6px;
-  padding-right: 24px; border-right: 1px solid var(--light);
-  padding-left: 24px;
+  padding-right: 18px; border-right: 1px solid var(--light);
+  padding-left: 18px;
 }
 .learning-item:first-child { padding-left: 0; }
-.learning-item:last-child { border-right: none; }
-.learning-course { font-family: var(--sans); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.3; }
-.learning-org { font-size: 12px; color: var(--gray); font-weight: 300; }
-
+.learning-item:last-child { border-right: none; padding-right: 0; }
+.learning-course { font-family: var(--sans); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.3; }
+.learning-org { font-size: 11px; color: var(--gray); font-weight: 300; }
+ 
 /* ── EDUCATION ROW ── */
 .education-row {
   display: grid; grid-template-columns: repeat(4, 1fr);
@@ -182,7 +188,7 @@ nav {
 .edu-label { font-size: 9px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--purple); margin-bottom: 10px; }
 .edu-cell h4 { font-family: var(--sans); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 4px; }
 .edu-cell p { font-size: 12px; color: var(--gray); line-height: 1.5; }
-
+ 
 /* ── AWARD STRIP ── */
 .award-strip {
   border-top: 1px solid var(--ink);
@@ -196,7 +202,7 @@ nav {
 .award-title { font-family: var(--sans); font-size: 16px; font-weight: 900; text-transform: uppercase; letter-spacing: -0.3px; line-height: 1.15; }
 .award-right { padding: 40px 64px; display: flex; align-items: center; }
 .award-right p { font-size: 14px; font-weight: 300; line-height: 1.75; color: #444; max-width: 640px; }
-
+ 
 /* ── EXPERIENCE ── */
 #experience { border-bottom: 1px solid var(--ink); }
 .exp-row {
@@ -214,6 +220,7 @@ nav {
 .exp-company-link:hover { color: var(--purple); }
 .exp-role { font-size: 11px; font-weight: 500; color: var(--purple); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 4px; }
 .exp-period { font-size: 11px; color: var(--gray); letter-spacing: 0.04em; text-transform: uppercase; margin-top: 4px; }
+.exp-context { font-size: 11px; color: var(--gray); letter-spacing: 0.02em; margin-top: 8px; font-style: italic; font-weight: 300; }
 .exp-main { border-right: 1px solid var(--ink); padding: 48px 48px; }
 .exp-main p { font-size: 14px; font-weight: 300; line-height: 1.75; color: #333; }
 .exp-main p + p { margin-top: 12px; }
@@ -223,7 +230,50 @@ nav {
 .outcome-item { display: flex; align-items: baseline; gap: 10px; }
 .outcome-val { font-family: var(--sans); font-size: 22px; font-weight: 900; letter-spacing: -0.5px; color: var(--purple); flex-shrink: 0; line-height: 1; }
 .outcome-desc { font-size: 11px; color: var(--gray); line-height: 1.4; text-transform: uppercase; letter-spacing: 0.04em; }
-
+ 
+/* ── HOW I OPERATE ── */
+#operate { border-bottom: 1px solid var(--ink); }
+.operate-intro {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--ink);
+}
+.operate-intro-left {
+  border-right: 1px solid var(--ink); padding: 64px 48px;
+  display: flex; align-items: center;
+}
+.operate-big {
+  font-family: var(--sans); font-size: clamp(40px, 5.5vw, 72px); font-weight: 900;
+  line-height: 0.9; letter-spacing: -2px; text-transform: uppercase;
+}
+.operate-big .acc { color: var(--purple); }
+.operate-intro-right {
+  padding: 64px 48px;
+  display: flex; align-items: center;
+}
+.operate-desc {
+  font-size: 15px; font-weight: 300; line-height: 1.75; color: #333;
+}
+.operate-desc strong { font-weight: 500; color: var(--ink); }
+.op-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+}
+.op-cell {
+  padding: 48px 48px; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink);
+}
+.op-cell:nth-child(2n) { border-right: none; }
+.op-cell:only-child, .op-cell.op-wide {
+  grid-column: 1 / -1;
+  border-right: none;
+}
+.op-cell:last-child { border-bottom: none; }
+.op-label { font-family: var(--sans); font-size: 10px; font-weight: 700; color: var(--purple); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 14px; }
+.op-cell h3 { font-family: var(--sans); font-size: 18px; font-weight: 900; text-transform: uppercase; letter-spacing: -0.3px; line-height: 1.15; margin-bottom: 16px; }
+.op-cell p { font-size: 14px; color: #444; font-weight: 300; line-height: 1.7; }
+.op-example {
+  margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--light);
+  font-size: 12px !important; color: var(--gray) !important; font-style: italic;
+}
+ 
 /* ── AI SECTION ── */
 .ai-section {
   border-bottom: 1px solid var(--ink);
@@ -248,7 +298,7 @@ nav {
 .ai-tool-name { font-family: var(--sans); font-size: 16px; font-weight: 900; text-transform: uppercase; letter-spacing: -0.2px; width: 96px; flex-shrink: 0; color: var(--purple); }
 .ai-tool-body h4 { font-family: var(--sans); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
 .ai-tool-body p { font-size: 13px; font-weight: 300; color: #555; line-height: 1.6; }
-
+ 
 /* ── SKILLS ── */
 #skills { border-bottom: 1px solid var(--ink); }
 .skills-body { display: grid; grid-template-columns: 1fr 1fr; }
@@ -276,7 +326,7 @@ nav {
 .tag:hover { background: var(--ink); color: var(--white); }
 .tag.p { border-color: var(--purple); color: var(--purple); }
 .tag.p:hover { background: var(--purple); color: var(--white); }
-
+ 
 /* ── CASES ── */
 #cases { border-bottom: 1px solid var(--ink); }
 .case-row { display: grid; grid-template-columns: 80px 1fr 1fr; border-bottom: 1px solid var(--ink); align-items: stretch; }
@@ -297,7 +347,7 @@ nav {
 .metric-desc { font-size: 11px; color: var(--gray); line-height: 1.4; text-transform: uppercase; letter-spacing: 0.04em; }
 .case-quote { font-size: 13px; font-style: italic; color: var(--gray); line-height: 1.65; padding-left: 14px; border-left: 2px solid var(--purple); }
 .case-cite { font-size: 10px; color: var(--gray); margin-top: 10px; font-style: normal; letter-spacing: 0.04em; text-transform: uppercase; }
-
+ 
 /* ── TESTIMONIAL ── */
 .testimonial {
   border-bottom: 1px solid var(--ink);
@@ -316,7 +366,7 @@ nav {
   padding-left: 24px; border-left: 3px solid var(--purple);
   max-width: 700px;
 }
-
+ 
 /* ── NARRATIVE BRIDGES ── */
 .cases-bridge {
   padding: 32px 48px 0;
@@ -340,7 +390,7 @@ nav {
   font-size: 12px; font-weight: 400; color: var(--gray);
   letter-spacing: 0.04em; text-transform: uppercase;
 }
-
+ 
 /* ── CTA STRIP ── */
 .cta-strip {
   border-bottom: 1px solid var(--ink);
@@ -357,7 +407,7 @@ nav {
   transition: background .15s;
 }
 .cta-btn:hover { background: var(--ink); }
-
+ 
 /* ── LOOKING ── */
 .looking {
   border-bottom: 1px solid var(--ink); background: var(--ink); color: var(--white);
@@ -374,7 +424,7 @@ nav {
 .li-arrow { font-family: var(--sans); font-size: 10px; font-weight: 700; color: var(--purple); text-transform: uppercase; flex-shrink: 0; margin-top: 2px; }
 .li-body h4 { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 5px; }
 .li-body p { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.55; font-weight: 300; }
-
+ 
 /* ── CONTACT ── */
 #contact { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--ink); min-height: 320px; }
 .contact-left { border-right: 1px solid var(--ink); padding: 64px 48px; display: flex; flex-direction: column; justify-content: space-between; }
@@ -393,31 +443,35 @@ nav {
 .cl-platform { font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--purple); }
 .cl-name { font-family: var(--sans); font-size: 17px; font-weight: 700; text-transform: uppercase; }
 .cl-arrow { font-size: 22px; color: var(--gray); transition: transform .2s; }
-
+ 
 /* ── FOOTER ── */
 footer { display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; font-size: 10px; color: var(--gray); letter-spacing: 0.08em; text-transform: uppercase; }
 footer span { color: var(--ink); font-weight: 500; }
-
+ 
 /* ── REVEAL ── */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.in { opacity: 1; transform: none; }
 .d1 { transition-delay: .08s; }
 .d2 { transition-delay: .16s; }
 .d3 { transition-delay: .24s; }
-
+ 
 /* ── RESPONSIVE ── */
 @media (max-width: 960px) {
   nav { padding: 0 24px; }
   .nav-links, .nav-cta { display: none; }
-  .hero, .about-grid, .ai-section, .skills-body, .looking, #contact { grid-template-columns: 1fr; }
-  .hero-left, .about-left, .ai-left, .skills-left, .contact-left { border-right: none; border-bottom: 1px solid var(--ink); }
+  .hero, .about-grid, .ai-section, .skills-body, .looking, #contact, .operate-intro, .op-grid, .about-single-inner { grid-template-columns: 1fr; }
+  .about-single { padding: 40px 24px; }
+  .about-single-inner { gap: 32px; }
+  .hero-left, .about-left, .ai-left, .skills-left, .contact-left, .operate-intro-left { border-right: none; border-bottom: 1px solid var(--ink); }
   .hero-left, .hero-right, .about-left, .about-right, .ai-left, .ai-right,
-  .skills-left, .contact-left, .contact-right, .looking { padding: 40px 24px; }
+  .skills-left, .contact-left, .contact-right, .looking, .operate-intro-left, .operate-intro-right { padding: 40px 24px; }
   .sh { padding: 14px 24px; }
   .exp-row { grid-template-columns: 1fr; }
   .exp-meta { border-right: none; border-bottom: 1px solid var(--ink); padding: 32px 24px; }
   .exp-main { border-right: none; border-bottom: 1px solid var(--ink); padding: 32px 24px; }
   .exp-outcomes { padding: 32px 24px; }
+  .op-cell { padding: 32px 24px; border-right: none; }
+  .op-cell:nth-child(2n) { border-right: none; }
   .case-row { grid-template-columns: 48px 1fr; }
   .case-left { border-right: none; border-bottom: 1px solid var(--ink); grid-column: 2; }
   .case-right { grid-column: 2; }
@@ -441,20 +495,21 @@ footer span { color: var(--ink); font-weight: 500; }
 </style>
 </head>
 <body>
-
+ 
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-name">Palina Mushtukova</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#operate">The way I work</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#cases">Cases</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Let's talk →</a>
 </nav>
-
+ 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
@@ -465,18 +520,18 @@ footer span { color: var(--ink); font-weight: 500; }
       <span>PRODUCTS.</span>
     </h1>
     <div class="hero-bottom">
-      <a href="#about" class="hero-scroll">↓</a>
+      <div class="hero-scroll">↓</div>
     </div>
   </div>
-
+ 
   <div class="hero-right">
     <p class="hero-intro">
-      Hi, I'm Palina. I started as a chemistry teacher — and somewhere along the way ended up building products. Not by accident. I genuinely believe <em class="mark">education</em> is one of the most powerful things that can happen to a person. So I stayed close to it: as a founder, as a learning designer, and now as a PM. That arc means I never lose sight of the actual human on the other side of the screen — and I hold the product accountable to them. I'm also a bit of a data nerd. The kind who <strong>digs until the numbers tell a real story</strong>, not just a convenient one — and then builds from there.
+      Hi, I'm Palina. I started as a chemistry teacher — and somewhere along the way ended up building products for kids and teens. Not by accident. I genuinely believe <em class="mark">education</em> is one of the most powerful things that can happen to a person. So I stayed close to it: as a founder, as a learning designer, and now as a PM for mobile subscription products in EdTech. That arc means I never lose sight of the actual human on the other side of the screen — usually a kid trying to learn something hard — and I hold the product accountable to them. I'm also a bit of a data nerd. The kind who <strong>digs until the numbers tell a real story</strong>, not just a convenient one — and then builds from there.
     </p>
     <div class="hero-stats">
       <div class="stat-box">
-        <span class="stat-num">+38%</span>
-        <p class="stat-label">ARPPU uplift<br>Ewa Learn</p>
+        <span class="stat-num">+9.3%</span>
+        <p class="stat-label">ARPU Android<br>EWA Max onboarding</p>
       </div>
       <div class="stat-box">
         <span class="stat-num">+78%</span>
@@ -493,75 +548,45 @@ footer span { color: var(--ink); font-weight: 500; }
     </div>
   </div>
 </section>
-
+ 
 <!-- ABOUT -->
 <section id="about">
   <div class="sh">
     <span class="sh-num">01 —</span>
     <span class="sh-title">About me</span>
   </div>
-
-  <div class="about-grid">
-    <div class="about-left">
-      <h2 class="about-big reveal">HOW I<br><span class="acc">THINK</span><br>&amp; HOW<br>I WORK.</h2>
+ 
+  <div class="about-single">
+    <div class="about-single-inner">
+      <h2 class="about-big reveal">WHERE I<br><span class="acc">COME</span><br>FROM.</h2>
       <div class="about-desc reveal d1">
         <p>My path into product wasn't linear — and I think that's a feature, not a bug. I started as a chemistry teacher, built my own EdTech startup from scratch, designed learning experiences at Yandex Practicum and Kodland, and gradually moved into full product ownership. Each step added a layer: domain depth, user empathy, learning science, business mechanics.</p>
         <p>Today I work at the intersection of <strong>education, technology, and data</strong>. I love the analytical side — pressure-testing assumptions, building metrics trees, figuring out why something works or doesn't. But I never lose the thread back to the person using the product.</p>
         <p>I'm most drawn to products where <strong>student outcomes and business results move together</strong> — because that's where the best product decisions live.</p>
       </div>
     </div>
-
-    <div class="about-right">
-      <div class="principle-item reveal">
-        <p class="p-label">What defines me — 01</p>
-        <h3>Meaning first</h3>
-        <p>I care deeply about building products that actually matter. I want to work on things that improve people's lives — not just fill screens or chase short-term wins.</p>
-      </div>
-      <div class="principle-item reveal d1">
-        <p class="p-label">What defines me — 02</p>
-        <h3>Data depth</h3>
-        <p>I'm a real analytics nerd. I love numbers, product logic, and business mechanics. I trust intuition, but I verify through data. I'm very comfortable operating close to the data.</p>
-      </div>
-      <div class="principle-item reveal d2">
-        <p class="p-label">What defines me — 03</p>
-        <h3>Long-term mindset</h3>
-        <p>Great products are built through consistency, resilience, and smart long-term work. I know how to keep momentum through ambiguity, complexity, and plateaus.</p>
-      </div>
-      <div class="principle-item reveal d3">
-        <p class="p-label">What defines me — 04</p>
-        <h3>Technology as leverage</h3>
-        <p>I love working in modern product environments where analytics, experimentation, AI, and strong cross-functional collaboration create real leverage and better outcomes.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="marathon-strip reveal">
-    <div class="marathon-icon">✦</div>
-    <div class="marathon-text">
-      <h3>A private note about me — and it's very much me.</h3>
-      <p>I'm a marathon runner. Not just literally, but in the way I work. I think long-term, hold the pace, and know how to keep building when things get hard, messy, or slow. I've learned that consistency compounds. That showing up when progress isn't visible is exactly when the most important work happens. When others get tired of the distance, I keep building.</p>
-    </div>
   </div>
 </section>
-
+ 
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="sh">
     <span class="sh-num">02 —</span>
     <span class="sh-title">Experience</span>
   </div>
-
+ 
   <!-- EWA -->
   <div class="exp-row reveal">
     <div class="exp-meta">
       <a href="https://appewa.com/" target="_blank" class="exp-company-link">EWA</a>
       <span class="exp-role">Product Manager</span>
-      <span class="exp-period">2026 — Present</span>
+      <span class="exp-period">Dec 2025 — Present</span>
+      <span class="exp-context">AI-powered language learning · mobile subscription (iOS/Android)</span>
     </div>
     <div class="exp-main">
-      <p>At EWA, I own the product revenue stream end-to-end — across monetization strategy, product decisions, and a cross-functional team of iOS/Android engineers, QA, analyst, and designer.</p>
-      <p>One of my first moves was a <strong>full analytical audit</strong> of the revenue area: I connected directly to ClickHouse via MCP and used Cursor to run deep exploratory analysis. Within one week, I had a clear picture of where value was leaking, what the real growth levers were, and what the team had been missing. That audit became the foundation for the <strong>team's entire Q2 backlog</strong> — built independently, without waiting for a report to land.</p>
-      <p>First shipped experiment: a redesigned user flow for the learning library that delivered <strong>+38% ARPPU</strong>.</p>
+      <p>At EWA, I own the product revenue stream end-to-end — across monetization strategy, product decisions, and a cross-functional team of iOS/Android engineers, QA, analyst, and designer. I also set monetization and new-user retention strategy across the wider product org.</p>
+      <p>One of my highest-leverage moves: I <strong>set up a self-service analytics layer</strong> for the product teams — ClickHouse connected via MCP, Cursor-based workflow, AI agents taking over parts of the analyst's job. Product teams now run their own event queries, slice data in real time, and build dashboards on demand. The effect isn't just faster research — it's a <strong>meaningful cut in user-story time-to-market</strong>: teams validate hypotheses without waiting on an analyst queue.</p>
+      <p>Shipped experiments so far include a redesigned library user flow (<strong>+38% ARPPU</strong>) and an EWA Max onboarding upgrade (<strong>+7.3% ARPU iOS, +9.3% ARPU Android</strong>).</p>
     </div>
     <div class="exp-outcomes">
       <p class="exp-outcome-label">Selected outcomes</p>
@@ -570,29 +595,30 @@ footer span { color: var(--ink); font-weight: 500; }
         <span class="outcome-desc">ARPPU · library user flow redesign</span>
       </div>
       <div class="outcome-item">
-        <span class="outcome-val">1W</span>
-        <span class="outcome-desc">Full analytics audit → Q2 backlog</span>
+        <span class="outcome-val">+9.3%</span>
+        <span class="outcome-desc">ARPU Android · EWA Max onboarding</span>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-val">AI</span>
+        <span class="outcome-desc">Self-service analytics for product teams · MCP + Cursor</span>
       </div>
       <div class="outcome-item">
         <span class="outcome-val">E2E</span>
         <span class="outcome-desc">Revenue ownership across full product cycle</span>
       </div>
-      <div class="outcome-item">
-        <span class="outcome-val">6</span>
-        <span class="outcome-desc">People in cross-functional product team</span>
-      </div>
     </div>
   </div>
-
+ 
   <!-- Kodland -->
   <div class="exp-row reveal">
     <div class="exp-meta">
       <a href="https://www.kodland.org/" target="_blank" class="exp-company-link">Kodland</a>
       <span class="exp-role">Product Owner · Faculty Lead, Math</span>
       <span class="exp-period">2023 — 2025</span>
+      <span class="exp-context">Online coding school for kids · 500K+ students globally</span>
     </div>
     <div class="exp-main">
-      <p>Led the Math direction across product, learning experience, growth, and operations. A role that required both strategic thinking and a lot of systems work: improving the product itself, strengthening the learning experience, working on business metrics, and shaping a more scalable product across markets.</p>
+      <p>Led the Math direction across product, learning experience, growth, and operations at a kids coding school serving 500K+ students globally. A role that required both strategic thinking and a lot of systems work: improving the product itself, strengthening the learning experience, working on business metrics, and shaping a more scalable product across markets.</p>
       <p>A significant part of the work was <strong>launching and scaling products into new markets</strong> — LATAM, MENA, Asia, Europe, and CIS. Each market brought different learner behaviour, different acquisition dynamics, and different content requirements. I worked across all of them.</p>
       <p>Over time, Math became the <strong>quickest-growing product</strong> in the portfolio. netLTV grew +78% YoY, refund rate dropped by 2.5 pp, and AOV lifted +28% through pricing experiments.</p>
     </div>
@@ -616,13 +642,14 @@ footer span { color: var(--ink); font-weight: 500; }
       </div>
     </div>
   </div>
-
+ 
   <!-- SimpleChem -->
   <div class="exp-row reveal">
     <div class="exp-meta">
       <span class="exp-company">Simple<br>Chem</span>
       <span class="exp-role">Founder</span>
       <span class="exp-period">2021 — 2024</span>
+      <span class="exp-context">Self-founded B2C subscription EdTech · chemistry exam prep</span>
     </div>
     <div class="exp-main">
       <p>SimpleChem is the project I'm most personally proud of. I started it from a belief that chemistry — one of the most feared school subjects — could become something teenagers actually enjoy, if someone built the right product around it.</p>
@@ -651,11 +678,74 @@ footer span { color: var(--ink); font-weight: 500; }
     </div>
   </div>
 </section>
-
+ 
+<!-- HOW I OPERATE -->
+<section id="operate">
+  <div class="sh">
+    <span class="sh-num">03 —</span>
+    <span class="sh-title">The way I work</span>
+  </div>
+ 
+  <div class="operate-intro">
+    <div class="operate-intro-left">
+      <h2 class="operate-big reveal">THE WAY<br>I <span class="acc">WORK.</span></h2>
+    </div>
+    <div class="operate-intro-right">
+      <p class="operate-desc reveal d1">
+        The patterns that show up across every product I've worked on. Not a list of values on a slide — <strong>how I actually behave</strong> when the team's at the whiteboard, when the metrics are ambiguous, or when something isn't working and someone has to say it out loud.
+      </p>
+    </div>
+  </div>
+ 
+  <div class="op-grid">
+    <div class="op-cell reveal">
+      <p class="op-label">01 — Meaning first</p>
+      <h3>I build for outcomes that actually matter.</h3>
+      <p>I care deeply about working on products that improve people's lives — not ones that fill screens or chase short-term wins. Education sits at the top of that list for me: it changes what kind of adults kids grow into, and I want to spend my career making that better. I pick projects I'd be proud to build, and I bring that standard to everything I ship.</p>
+    </div>
+ 
+    <div class="op-cell reveal d1">
+      <p class="op-label">02 — Systems lens</p>
+      <h3>I zoom out past my own team.</h3>
+      <p>The product I own is one piece of a larger system — acquisition, monetization, retention, content, learning experience, etc. I reason about all of them, because that's where real leverage lives. Optimising one metric at the expense of the system is easy. Seeing the whole picture is the job.</p>
+    </div>
+ 
+    <div class="op-cell reveal">
+      <p class="op-label">03 — Experience re-invention</p>
+      <h3>I rebuild the experience when a patch won't do.</h3>
+      <p>Sometimes a learning product doesn't need a feature — it needs a new model. I've redesigned full curricula, learning architectures, and teacher training systems when the surface-level fixes would have been cheap and wrong. Product is more than the UI; it's how the whole thing is structured to produce an outcome.</p>
+    </div>
+ 
+    <div class="op-cell reveal d1">
+      <p class="op-label">04 — Leading without title</p>
+      <h3>I grow teams around me, even before it's my job.</h3>
+      <p>I've grown from LXD to Product Owner to PM inside the same companies — not by asking, but by taking on more until the scope caught up with the title. People have followed me into new work, new teams, new bets. That's what leadership looks like before a manager title shows up on LinkedIn.</p>
+    </div>
+ 
+    <div class="op-cell op-wide reveal">
+      <p class="op-label">05 — Long-term mindset</p>
+      <h3>I hold pace through the quiet stretches.</h3>
+      <p>Great products get built through consistency, not heroic sprints. I know how to keep momentum through ambiguity, complexity, and plateaus — and to show up when progress isn't visible, which is usually when the most important work is happening. I'm a marathon runner, literally and at work. When others get tired of the distance, I keep building.</p>
+    </div>
+ 
+    <div class="op-cell op-wide reveal">
+      <p class="op-label">06 — Metric hygiene with a line</p>
+      <h3>I'll fight for the numbers — and I'll fight the numbers when the experience is wrong.</h3>
+      <p>I'm a data nerd by default. I'll pressure-test assumptions, tear apart a dashboard, and refuse to ship to-the-metric improvements that don't hold up to scrutiny. I won't let a product drown in pseudo-wins. <strong>But I also won't ship a lift that breaks the user experience, or that sacrifices the learning outcome for the revenue one.</strong> Especially for kids — fun and meaning come before numbers, every time. If the experiment wins on metrics but the kid loses, it's not a win.</p>
+    </div>
+ 
+    <div class="op-cell op-wide reveal d1">
+      <p class="op-label">07 — Disagreement as a feature</p>
+      <h3>I can't stay quiet when I disagree.</h3>
+      <p>Not for drama — because the best product decisions come from naming the hard thing early, not later. I'll push back on strategy, pricing, scope, framing, research, whatever. I'll change my mind when I'm wrong. I'd rather be the PM who asked the uncomfortable question than the PM everyone remembers as easy to work with.</p>
+    </div>
+  </div>
+</section>
+ 
 <div class="section-bridge reveal">
-  <p>The way I work today — how I approach data, discovery, and delivery</p>
+  <p>What changed when AI joined my toolkit</p>
 </div>
-
+ 
 <!-- AI SECTION -->
 <div class="ai-section">
   <div class="ai-left">
@@ -669,15 +759,15 @@ footer span { color: var(--ink); font-weight: 500; }
     <div class="ai-tool-row reveal">
       <span class="ai-tool-name">CURSOR</span>
       <div class="ai-tool-body">
-        <h4>Deep analytics & discovery</h4>
-        <p>At EWA, I connected directly to ClickHouse via MCP and ran a full analytical audit of the revenue area in one week — mapping leaking value, identifying real growth levers, and building the team's entire quarterly backlog from the findings.</p>
+        <h4>My daily analytics hands</h4>
+        <p>I use Cursor to instrument analytical events, run research queries, slice data, and spin up dashboards for my own questions in real time — no analyst bottleneck. At EWA, I built this into a self-service workflow the whole product org uses.</p>
       </div>
     </div>
     <div class="ai-tool-row reveal d1">
       <span class="ai-tool-name">CLAUDE</span>
       <div class="ai-tool-body">
         <h4>Prototyping & structured thinking</h4>
-        <p>Solution exploration, rapid prototyping, structured problem framing — accelerating delivery without losing depth. This portfolio was also built with Claude.</p>
+        <p>I prototype features for my New User Retention team — spinning up working demos to pressure-test ideas before they hit eng. Also solution exploration, structured problem framing, doc drafting. This portfolio was built with Claude too.</p>
       </div>
     </div>
     <div class="ai-tool-row reveal d2">
@@ -689,11 +779,11 @@ footer span { color: var(--ink); font-weight: 500; }
     </div>
   </div>
 </div>
-
+ 
 <!-- SKILLS -->
 <section id="skills">
   <div class="sh">
-    <span class="sh-num">03 —</span>
+    <span class="sh-num">04 —</span>
     <span class="sh-title">Knowledge & Tools</span>
   </div>
   <div class="skills-body">
@@ -761,7 +851,7 @@ footer span { color: var(--ink); font-weight: 500; }
       </div>
     </div>
   </div>
-
+ 
   <!-- LEARNING BLOCK -->
   <div class="learning-strip reveal">
     <div class="learning-left">
@@ -774,10 +864,6 @@ footer span { color: var(--ink); font-weight: 500; }
         <span class="learning-org">Universal University</span>
       </div>
       <div class="learning-item">
-        <span class="learning-course">Gamification</span>
-        <span class="learning-org">CG Education</span>
-      </div>
-      <div class="learning-item">
         <span class="learning-course">Product Management</span>
         <span class="learning-org">Wanna Be Like</span>
       </div>
@@ -785,9 +871,21 @@ footer span { color: var(--ink); font-weight: 500; }
         <span class="learning-course">Data-driven Decision Making</span>
         <span class="learning-org">Go Practice Simulator</span>
       </div>
+      <div class="learning-item">
+        <span class="learning-course">Analyze Data with SQL</span>
+        <span class="learning-org">Codecademy</span>
+      </div>
+      <div class="learning-item">
+        <span class="learning-course">Registered Scrum Basics</span>
+        <span class="learning-org">Scrum Alliance</span>
+      </div>
+      <div class="learning-item">
+        <span class="learning-course">Gamification</span>
+        <span class="learning-org">CG Education</span>
+      </div>
     </div>
   </div>
-
+ 
   <!-- AWARD -->
   <div class="award-strip reveal">
     <div class="award-left">
@@ -799,22 +897,22 @@ footer span { color: var(--ink); font-weight: 500; }
     </div>
   </div>
 </section>
-
+ 
 <div class="section-bridge reveal">
   <p>The thinking behind the work — learning design roots that shape my product approach</p>
 </div>
-
+ 
 <!-- CASES -->
 <section id="cases">
   <div class="sh">
-    <span class="sh-num">04 —</span>
+    <span class="sh-num">05 —</span>
     <span class="sh-title">Learning Experience Cases</span>
   </div>
-
+ 
   <div class="cases-bridge reveal">
     <p>Before and alongside product management, I built deep expertise in learning experience design. These cases show the thinking that still shapes how I approach product today — I don't see products as funnels or feature sets, but as systems people move through, learn through, and experience emotionally.</p>
   </div>
-
+ 
   <div class="case-row reveal">
     <div class="case-idx">01</div>
     <div class="case-left">
@@ -829,7 +927,7 @@ footer span { color: var(--ink); font-weight: 500; }
       <p class="case-cite">— Madin Tlishev, PM, Yandex Practicum</p>
     </div>
   </div>
-
+ 
   <div class="case-row reveal">
     <div class="case-idx">02</div>
     <div class="case-left">
@@ -844,7 +942,7 @@ footer span { color: var(--ink); font-weight: 500; }
       <p class="case-cite">— Anastasia Zhdanovskaya, LX Designer, Toloka AI</p>
     </div>
   </div>
-
+ 
   <div class="case-row reveal">
     <div class="case-idx">03</div>
     <div class="case-left">
@@ -860,7 +958,7 @@ footer span { color: var(--ink); font-weight: 500; }
     </div>
   </div>
 </section>
-
+ 
 <!-- TESTIMONIAL -->
 <div class="testimonial reveal">
   <div class="testi-left">
@@ -876,7 +974,7 @@ footer span { color: var(--ink); font-weight: 500; }
     </blockquote>
   </div>
 </div>
-
+ 
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact-left">
@@ -902,13 +1000,13 @@ footer span { color: var(--ink); font-weight: 500; }
     </a>
   </div>
 </section>
-
+ 
 <footer>
   <span>Palina Mushtukova</span>
   <span>Product Manager · EdTech · AI</span>
   <span>Building meaningful products.</span>
 </footer>
-
+ 
 <script>
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
