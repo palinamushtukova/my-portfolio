@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Palina Mushtukova — Product Manager</title>
+
+<!-- Fonts loaded for all tweak options; CSS vars pick which one is active -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Kalam:wght@300;400;700&family=Architects+Daughter&family=Patrick+Hand&family=Shadows+Into+Light&family=Space+Grotesk:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css" />
+
+<!-- External resources referenced from JS/JSX (for standalone bundling) -->
+<meta name="ext-resource-dependency" content="assets/portrait.jpg" data-resource-id="portraitImg" />
+
+<!-- Splash / no-JS fallback -->
+<template id="__bundler_thumbnail" data-bg-color="#EAE6DD">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(600 400)" fill="none" stroke="#1F3A5F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <!-- stack of books -->
+      <rect x="-180" y="60" width="360" height="60" rx="4" fill="#1F3A5F" fill-opacity="0.08"/>
+      <rect x="-150" y="0" width="300" height="60" rx="4" fill="#1F3A5F" fill-opacity="0.08"/>
+      <rect x="-200" y="-60" width="400" height="60" rx="4" fill="#1F3A5F" fill-opacity="0.08"/>
+      <!-- flowers -->
+      <path d="M-80 -60 C -88 -140, -80 -220, -60 -280" stroke-width="6"/>
+      <circle cx="-60" cy="-290" r="28" stroke-width="6"/>
+      <circle cx="-60" cy="-290" r="10" fill="#1F3A5F"/>
+      <path d="M0 -60 C 4 -160, 10 -260, 20 -340" stroke-width="6"/>
+      <circle cx="20" cy="-350" r="34" stroke-width="6"/>
+      <circle cx="20" cy="-350" r="12" fill="#1F3A5F"/>
+      <path d="M80 -60 C 92 -130, 110 -200, 130 -260" stroke-width="6"/>
+      <circle cx="130" cy="-270" r="24" stroke-width="6"/>
+      <circle cx="130" cy="-270" r="8" fill="#1F3A5F"/>
+    </g>
+  </svg>
+</template>
+</head>
+<body>
+
+<!-- state init for tweaks -->
+<script>
+  window.__TWEAKS__ = /*EDITMODE-BEGIN*/{
+    "palette": "ink",
+    "displayFont": "architects",
+    "bodyFont": "space"
+  }/*EDITMODE-END*/;
+</script>
+
+<div id="root"></div>
+
+<!-- React -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<!-- Parts -->
+<script type="text/babel" src="src/assets.jsx"></script>
+<script type="text/babel" src="src/sections/Hero.jsx"></script>
+<script type="text/babel" src="src/sections/About.standalone.jsx"></script>
+<script type="text/babel" src="src/sections/Stats.jsx"></script>
+<script type="text/babel" src="src/sections/Experience.jsx"></script>
+<script type="text/babel" src="src/sections/Operate.jsx"></script>
+<script type="text/babel" src="src/sections/AI.jsx"></script>
+<script type="text/babel" src="src/sections/Skills.jsx"></script>
+<script type="text/babel" src="src/sections/Cases.jsx"></script>
+<script type="text/babel" src="src/sections/Testimonial.jsx"></script>
+<script type="text/babel" src="src/sections/Contact.jsx"></script>
+<script type="text/babel" src="src/Tweaks.jsx"></script>
+<script type="text/babel" src="src/App.jsx"></script>
+
+</body>
+</html>
