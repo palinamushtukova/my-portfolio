@@ -17,11 +17,6 @@ function AI() {
           <p>I prototype features for my New User Retention team — spinning up working demos to pressure-test ideas before they hit eng. Also solution exploration, structured problem framing, doc drafting. This portfolio was built with Claude too.</p>
         </div>
         <div className="ai-card">
-          <div className="kicker">Flywheels</div>
-          <h4>Personalization that compounds</h4>
-          <p>My favorite frontier: systems that get smarter as the product grows. I authored a knowledge-graph-based learner modeling concept — mapping what a user actually knows to build individual learning trajectories — which the company adopted for implementation. That's the real promise of AI in education: personalization as a compounding retention advantage, not a feature.</p>
-        </div>
-        <div className="ai-card">
           <div className="kicker">Result</div>
           <h4>More depth, not just more speed</h4>
           <p>I move faster on the analytical and delivery side so I can invest more in the strategic and qualitative side. That's the actual leverage.</p>
