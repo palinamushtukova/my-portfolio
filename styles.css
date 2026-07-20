@@ -595,7 +595,7 @@ p strong { color: var(--fg); font-weight: 600; }
 /* ---------- AI ---------- */
 .ai-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-top: 40px;
 }
@@ -608,7 +608,7 @@ p strong { color: var(--fg); font-weight: 600; }
   transform: rotate(var(--r, -0.5deg));
   position: relative;
 }
-.ai-card:nth-child(2){--r:0.4deg} .ai-card:nth-child(3){--r:-0.3deg}
+.ai-card:nth-child(2){--r:0.4deg} .ai-card:nth-child(3){--r:-0.3deg} .ai-card:nth-child(4){--r:0.3deg}
 .ai-card .kicker {
   display: inline-block;
   font-family: var(--display);
