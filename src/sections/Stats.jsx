@@ -1,9 +1,9 @@
 function Stats() {
   const items = [
-    { n: '+9.3%',  l: 'ARPU Android · EWA Max onboarding' },
-    { n: '+78%',   l: 'netLTV YoY · Math · Kodland' },
-    { n: '5.6%',   l: 'E2E conversion · 0→1 MVP launch' },
-    { n: '+28%',   l: 'AOV via pricing experiments' },
+    { n: '+7.7%',  l: 'D14 retention · early experience · EWA' },
+    { n: '+78%',   l: 'netLTV YoY · retention-led · Kodland' },
+    { n: '81%',    l: 'Course completion · SimpleChem' },
+    { n: '+9.3%',  l: 'ARPU · EWA Max onboarding' },
   ];
   return (
     <div className="stats">

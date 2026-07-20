@@ -14,7 +14,7 @@ function About() {
           }}></div>
           <div className="portrait-caption">
             Palina Mushtukova
-            <small>Product Manager · EdTech · AI</small>
+            <small>Senior Product Manager · EdTech · AI</small>
           </div>
         </div>
         <div className="portrait-tag" style={{position:'relative', marginTop: 18, fontFamily: 'var(--display)', fontSize: 24, textAlign:'right', paddingRight: 40, color:'var(--accent)'}}>

@@ -113,7 +113,7 @@ window.HeroMark = HeroMark;
 function Hero() {
   return (
     <section className="hero section" id="top" style={{borderTop: 0}}>
-      <div className="hero-eyebrow">Product Manager</div>
+      <div className="hero-eyebrow">Senior Product Manager · Retention &amp; Growth</div>
 
       <h1 className="hero-title">
         Building<br/>

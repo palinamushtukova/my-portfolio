@@ -8,21 +8,22 @@ function Experience() {
       <div className="xp-block">
         <div className="xp-meta">
           <div className="co"><a href="https://appewa.com/?language=en" target="_blank" rel="noopener noreferrer" className="co-link">EWA</a></div>
-          <div className="role">Product Manager</div>
-          <div className="when">Dec 2025 — Present</div>
+          <div className="role">Senior Product Manager</div>
+          <div className="when">Jan 2026 — Present</div>
           <div className="context">AI-powered language learning · mobile subscription (iOS/Android)</div>
         </div>
         <div className="xp-body">
-          <p>At EWA, I lead two product teams — <strong>Monetization</strong> and <strong>New User Retention</strong>. EWA is freemium, so I basically own the first experience users meet: how well it lands on their learning goal, and how we turn a free user into a paid one. It means living at the intersection of monetization and retention, holding the big picture at all times.</p>
+          <p>At EWA, I lead the <strong>New User Retention</strong> and <strong>Monetization</strong> squads — a cross-functional team of 7 across product, engineering and analytics, on a $40M ARR app. I own the first experience users meet: how well it lands on their learning goal, whether they come back, and how that early habit turns into long-term value. Retention and revenue live in one system — my job is to hold the whole picture.</p>
+          <p>The work I care most about: reworking the <strong>early user experience</strong> and post-onboarding recommendations — lifting <span className="highlight">D14 retention by 7.7%</span> and new-user retention by 5% — so that the first days actually build a learning habit, not just a first payment.</p>
           <p>Proud of one process win: cutting <strong>time-to-market</strong> for user stories by building a self-service analytics layer — ClickHouse via MCP, Cursor workflow, AI agents taking over parts of the analyst's work. Teams now query and build dashboards on their own.</p>
-          <p>Shipped so far: library user flow redesign (<span className="highlight">+38% ARPPU</span>), EWA Max onboarding upgrade (<span className="highlight">+7.3% ARPU iOS, +9.3% ARPU Android</span>).</p>
+          <p>Also shipped on the revenue side: EWA Max onboarding upgrade (<span className="highlight">+9.3% ARPU</span>), in-app upsell flow redesign (+22.5% upsell ARPU).</p>
 
           <h4>Selected outcomes</h4>
           <div className="xp-outcomes">
-            <div className="outcome"><div className="v">+38%</div><div className="d">ARPPU · library user flow redesign</div></div>
-            <div className="outcome"><div className="v">+9.3%</div><div className="d">ARPU Android · EWA Max onboarding</div></div>
+            <div className="outcome"><div className="v">+7.7%</div><div className="d">D14 retention · early experience rework</div></div>
+            <div className="outcome"><div className="v">+5%</div><div className="d">New-user retention · post-onboarding recommendations</div></div>
             <div className="outcome"><div className="v">AI</div><div className="d">Self-service analytics for product teams · MCP + Cursor</div></div>
-            <div className="outcome"><div className="v">E2E</div><div className="d">Revenue ownership across full product cycle</div></div>
+            <div className="outcome"><div className="v">+9.3%</div><div className="d">ARPU · EWA Max onboarding upgrade</div></div>
           </div>
         </div>
       </div>
@@ -31,19 +32,19 @@ function Experience() {
       <div className="xp-block">
         <div className="xp-meta">
           <div className="co"><a href="https://www.kodland.org/" target="_blank" rel="noopener noreferrer" className="co-link">Kodland</a></div>
-          <div className="role">Product Owner · Faculty Lead, Math</div>
-          <div className="when">2023 — 2025</div>
+          <div className="role">Product Manager · Faculty Lead, Math</div>
+          <div className="when">Jul 2023 — Dec 2025</div>
           <div className="context">Online coding school for kids · 500K+ students globally</div>
         </div>
         <div className="xp-body">
-          <p>Led the <strong>Math faculty</strong> at Kodland — a role that demanded both business fluency and academic/methodological depth. Over my time running the faculty, I launched courses <strong>0→1</strong>, took the product into <strong>new markets</strong>, fine-tuned the acquisition funnel, ran active marketing experiments, rebuilt the educational model, and designed a <strong>teacher training lab</strong>.</p>
-          <p>The result: Math became the <strong>quickest-growing product</strong> in the portfolio. netLTV grew <span className="highlight">+78% YoY</span>, refund rate dropped 2.5 pp, and AOV lifted +28% through pricing experiments.</p>
+          <p>Led the <strong>Math product line</strong> at Kodland (7 products, grades 1–7) — a role that demanded both business fluency and academic/methodological depth. I launched courses <strong>0→1</strong>, took the product into <strong>new markets</strong>, rebuilt the educational model around user JTBD, and designed a <strong>teacher training lab</strong>.</p>
+          <p>The result: Math became the <strong>quickest-growing product</strong> in the portfolio — and it was largely a <strong>retention story</strong>. netLTV grew <span className="highlight">+78% YoY</span>, driven by reworking the learning model, reducing early churn (refund rate −2.5 pp) and improving renewals. On top of that, AOV lifted +28% through pricing and packaging experiments.</p>
 
           <h4>Selected outcomes</h4>
           <div className="xp-outcomes">
+            <div className="outcome"><div className="v">+78%</div><div className="d">netLTV YoY · retention-led · Math</div></div>
+            <div className="outcome"><div className="v">−2.5pp</div><div className="d">Early churn · refund rate reduced</div></div>
             <div className="outcome"><div className="v">5</div><div className="d">Markets launched · LATAM, MENA, Asia, Europe, CIS</div></div>
-            <div className="outcome"><div className="v">+78%</div><div className="d">netLTV YoY · Math</div></div>
-            <div className="outcome"><div className="v">−2.5pp</div><div className="d">Refund rate reduced</div></div>
             <div className="outcome"><div className="v">№1</div><div className="d">Quickest-growing product in Kodland portfolio</div></div>
           </div>
         </div>
@@ -53,8 +54,8 @@ function Experience() {
       <div className="xp-block">
         <div className="xp-meta">
           <div className="co">Simple<br/>Chem</div>
-          <div className="role">Founder</div>
-          <div className="when">2021 — 2024</div>
+          <div className="role">Founder &amp; Product Manager</div>
+          <div className="when">Apr 2021 — Jul 2023</div>
           <div className="context">Self-founded B2C subscription EdTech · chemistry exam prep</div>
         </div>
         <div className="xp-body">
@@ -66,8 +67,8 @@ function Experience() {
           <h4>Selected outcomes</h4>
           <div className="xp-outcomes">
             <div className="outcome"><div className="v">Day 1</div><div className="d">Profitable from first cohort</div></div>
-            <div className="outcome"><div className="v">150+</div><div className="d">Active students annually</div></div>
-            <div className="outcome"><div className="v">6+</div><div className="d">Learning formats built solo</div></div>
+            <div className="outcome"><div className="v">81%</div><div className="d">Course completion rate · avg exam score 84/100</div></div>
+            <div className="outcome"><div className="v">150+</div><div className="d">Active students annually · 6 course products</div></div>
             <div className="outcome"><div className="v">0→1</div><div className="d">Full product cycle owned end-to-end</div></div>
           </div>
         </div>
