@@ -14,7 +14,7 @@ function Experience() {
         </div>
         <div className="xp-body">
           <p>At EWA, I lead the <strong>New User Retention</strong> and <strong>Monetization</strong> squads — a cross-functional team of 7 across product, engineering and analytics, on a $40M ARR app. I own the first experience users meet: how well it lands on their learning goal, whether they come back, and how that early habit turns into long-term value. Retention and revenue live in one system — my job is to hold the whole picture.</p>
-          <p>The work I care most about: reworking the <strong>early user experience</strong> and post-onboarding recommendations — lifting <span className="highlight">D14 retention by 7.7%</span> and new-user retention by 5% — so that the first days actually build a learning habit, not just a first payment.</p>
+          <p>The work I care most about: reworking the <strong>early user experience</strong> and building post-onboarding engagement loops — lifting <span className="highlight">D14 retention by 7.7%</span> and new-user retention by 5% — so that the first days form a real learning habit, not just a first payment.</p>
           <p>Proud of one process win: cutting <strong>time-to-market</strong> for user stories by building a self-service analytics layer — ClickHouse via MCP, Cursor workflow, AI agents taking over parts of the analyst's work. Teams now query and build dashboards on their own.</p>
           <p>Also shipped on the revenue side: EWA Max onboarding upgrade (<span className="highlight">+9.3% ARPU</span>), in-app upsell flow redesign (+22.5% upsell ARPU).</p>
 

@@ -1,6 +1,6 @@
 function Skills() {
   const cols = [
-    { idx: '01', title: 'Product', items: ['Product Strategy','Discovery (Qual & Quant)','A/B Testing & Experimentation','Funnel Optimisation','Monetisation & Unit Economics','International Scaling','0→1 Launches'] },
+    { idx: '01', title: 'Product', items: ['Product Strategy','Retention & Lifecycle Management','Habit Formation & Engagement Loops','Discovery (Qual & Quant)','A/B Testing & Experimentation','Personalization & Funnel Optimisation','Monetisation & Unit Economics','0→1 Launches · International Scaling'] },
     { idx: '02', title: 'Analytics', items: ['SQL','ClickHouse','Amplitude','Metabase','Tableau','Google Analytics','Metrics Tree Design','Cohort Analysis'] },
     { idx: '03', title: 'AI Tools', items: ['Cursor','Claude Code','Lovable','MCP Integrations'] },
     { idx: '04', title: 'Collab', items: ['Figma','Miro','Notion','Jira','Loom'] },
@@ -9,6 +9,7 @@ function Skills() {
     { n: 'Learning Experience Design', w: 'Universal University' },
     { n: 'Product Management', w: 'Wanna Be Like' },
     { n: 'Data-driven Decision Making', w: 'Go Practice Simulator' },
+    { n: 'IELTS Academic — English C1 (7.5)', w: 'British Council' },
     { n: 'Analyze Data with SQL', w: 'Codecademy' },
     { n: 'Registered Scrum Basics', w: 'Scrum Alliance' },
     { n: 'Gamification', w: 'CG Education' },
